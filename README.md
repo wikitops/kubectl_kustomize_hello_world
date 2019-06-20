@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to run this Ansible playbook :
+What things you need to deploy the application :
 
 *   [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) must be installed on your computer (version >= 1.14.0)
 *   [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/) must be installed on your computer
