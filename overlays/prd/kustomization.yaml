@@ -1,0 +1,23 @@
+namespace: prd-myhelloworld
+namePrefix: prd-
+
+commonLabels:
+  app: hello-world
+
+bases:
+- ../../base
+
+images:
+- name: the-container
+  newName: monopole/hello
+  newTag: "1"
+
+patchesStrategicMerge:
+- increase_replicas.yaml
+- set_memory.yaml
+
+configMapGenerator:
+- name: the-map
+  literals:
+  - altGreeting=PRD - Good Morning!
+  - enableRisky=false

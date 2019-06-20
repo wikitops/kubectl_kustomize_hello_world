@@ -1,0 +1,23 @@
+namespace: stg-myhelloworld
+namePrefix: stg-
+
+commonLabels:
+  app: hello-world
+
+bases:
+- ../../base
+
+images:
+- name: the-container
+  newName: monopole/hello
+  newTag: "1"
+
+patchesStrategicMerge:
+- increase_replicas.yaml
+- set_memory.yaml
+
+configMapGenerator:
+- name: the-map
+  literals:
+  - altGreeting=STG - Good Morning!
+  - enableRisky=false
